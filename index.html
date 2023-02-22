@@ -398,7 +398,7 @@
     <footer class="footer-section">
       <div class="container footer-container">
         <ul class="footer-item">
-          <li class="footer-list-section">
+          <li class="footer-list-section footer-first-section">
             <ul>
               <li>
                 <a class="logo text-decor" href="#"
@@ -411,7 +411,7 @@
               </li>
             </ul>
           </li>
-          <li class="footer-list-section">
+          <li class="footer-list-section footer-second-section">
             <h3 class="footer-social-header">Social media</h3>
             <ul class="footer-social-list list-none">
               <li class="footer-list-item">
@@ -454,6 +454,7 @@
                   name="user-subscribe"
                   placeholder="E-mail"
                   class="footer-text-sub"
+                  required
                 />
                 <button type="submit" class="sub-btn">
                   Subscribe
@@ -538,27 +539,32 @@
               class="modal-form-fextarea"
             ></textarea>
           </div>
-          <div class="modal-form-checkbox">
-            <input
-              id="user-policy"
-              type="checkbox"
-              name="user-policy"
-              class="modal-input-check visually-hidden"
-              required
-            />
-            <label for="user-policy" class="modal-form-check-desc"
-              ><span class="modal-form-fake-check">
-                <svg class="modal-check-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-check"></use>
-                </svg>
-              </span>
+
+            <label for="user-policy" class="modal-form-check-desc"></label>
+              <input
+                id="user-policy"
+                type="checkbox"
+                name="user-policy"
+                class="modal-input-check"
+                required
+              />
+              <svg class="modal-check-icon" width="16" height="16">
+                <use
+                  clas="custom-checkbox"
+                  href="./images/icons.svg#icon-checkbox"
+                ></use>
+                <use
+                  class="custom-check"
+                  href="./images/icons.svg#icon-check"
+                ></use>
+              </svg>
+              <span class="modal-form-desc-check">
               I accept the terms and conditions of the&nbsp;<a
                 class="modal-form-link"
                 href=""
                 >Privacy Policy</a
-              >
+              ></span>
             </label>
-          </div>
           <button type="submit" class="modal-submit-btn modal-submit-btn-style">
             Send
           </button>
